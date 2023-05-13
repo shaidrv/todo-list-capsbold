@@ -1,0 +1,28 @@
+@import '../../node_modules/scss-reset/reset';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import 'assets/card';
+@import 'assets/footer';
+
+body {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Montserrat;
+  color: #ffffff;
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(50% 50% at 50% 50%, #252e42 0%, #161c2e 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  ._container {
+    max-width: 458px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}

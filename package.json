@@ -1,0 +1,24 @@
+{
+  "name": "todo-list-capsbold",
+  "version": "1.0.0",
+  "description": "Сверстать макет с адаптивом под все устройства, используя БЭМ методологию. В качестве препроцессора используйте SASS\\SCSS. Макет: https://www.figma.com/file/NOqtqGtVFfUI9GaVmB3Mnt/Untitled?type=design&node-id=0-1&t=OsfdLxvTDySrMqyc-0",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev": "sass --watch --update --style=expanded assets/scss:assets/css",
+    "sass-prod": "sass --no-source-map --style=compressed assets/scss:assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaidrv/todo-list-capsbold.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaidrv/todo-list-capsbold/issues"
+  },
+  "homepage": "https://github.com/shaidrv/todo-list-capsbold#readme",
+  "devDependencies": {
+    "sass": "^1.62.1",
+    "scss-reset": "^1.4.0"
+  }
+}

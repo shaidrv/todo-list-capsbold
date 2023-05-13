@@ -1,0 +1,123 @@
+.card {
+  &__body {
+    max-width: 420px;
+    background-color: #252e42;
+    box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.25);
+    height: 540px;
+    border-radius: 20px 0px 40px;
+    padding: 30px 16px 30px 30px;
+    margin: 0 0 30px 0;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 359px;
+      height: 56px;
+      position: absolute;
+      bottom: 3px;
+      background: linear-gradient(
+        180deg,
+        rgba(37, 46, 66, 0) 0%,
+        #252e42 67.19%
+      );
+    }
+
+    &::before {
+      content: '';
+      width: 437px;
+      height: 40px;
+      position: absolute;
+      background: linear-gradient(
+        180deg,
+        rgba(37, 46, 66, 0) 0%,
+        #252e42 67.19%
+      );
+      top: 273px;
+      left: 161px;
+      transform: rotate(-90deg);
+      z-index: 1;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 20px 0;
+
+    .header__title {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 34px;
+      color: #ffffff;
+    }
+
+    .header__btn {
+      background-color: #ff8469;
+      padding: 5px 10px;
+      width: 54px;
+      height: 27px;
+      border-radius: 7px;
+      color: #ffffff;
+      text-decoration: none;
+      text-transform: uppercase;
+      line-height: 17px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+
+  .list {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 441px;
+    scrollbar-color: #ff8469 transparent;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background: transparent;
+
+      &-thumb {
+        background-color: #ff8469;
+        border-radius: 10px;
+      }
+    }
+
+    &__item {
+      position: relative;
+      margin: 0 0 0 35px;
+      padding: 9px 0;
+
+      &::before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: #4f5565;
+        border-radius: 6px;
+        position: absolute;
+        display: inline-block;
+        margin: 0 15px 0 0;
+        top: 50%;
+        left: -35px;
+        transform: translate(0, -50%);
+      }
+    }
+    &__title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      margin: 0 0 3px 0;
+    }
+
+    &__description {
+      color: #4f5565;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      text-overflow: clip;
+      height: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
