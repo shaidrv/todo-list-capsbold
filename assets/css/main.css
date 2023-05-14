@@ -594,14 +594,14 @@ template {
 .card__bg {
   position: absolute;
   max-width: 420px;
-  width: 100%;
-  height: 85px;
+  width: 90%;
+  height: 82px;
   left: 18px;
   top: -15px;
 }
 .card__bg1 {
   position: absolute;
-  width: 84%;
+  width: 84.5%;
   height: 85.23px;
   background: linear-gradient(180deg, #4f5565 0%, #000000 53.65%);
   border-radius: 20px;
@@ -611,7 +611,7 @@ template {
 }
 .card__bg2 {
   position: absolute;
-  width: 94%;
+  width: 98%;
   height: 67.97px;
   background: linear-gradient(180deg, #31394d 0%, #091739 100%);
   border-radius: 20px;
@@ -642,21 +642,22 @@ template {
 }
 .card__body::before {
   content: "";
-  width: 105%;
-  height: 7.5%;
-  position: absolute;
   background: linear-gradient(180deg, rgba(37, 46, 66, 0) 0%, #252e42 67.19%);
-  top: 50%;
-  left: 38%;
+  width: 441px;
+  height: 39px;
+  position: absolute;
+  top: 52%;
+  right: -181px;
   transform: rotate(-90deg);
   z-index: 1;
 }
 .card .card__header {
-  margin: 0 0 20px 0;
+  margin: 0px 13px 20px 0;
 }
 .card .header__content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .card .header__title {
   font-weight: 700;
@@ -696,6 +697,7 @@ template {
   position: relative;
   margin: 0 0 0 35px;
   padding: 9px 0;
+  max-width: calc(100vw - 115px);
 }
 .card .list__item::before {
   content: "";
@@ -760,6 +762,11 @@ template {
   line-height: 20px;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   font-size: 16px;
   font-weight: 500;
@@ -776,6 +783,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 30px;
 }
 .wrapper ._bg-animation {
   opacity: 0;
