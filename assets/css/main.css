@@ -580,8 +580,49 @@ template {
   display: none;
 }
 
+.card {
+  position: relative;
+}
+.card:hover .card__bg1 {
+  top: -30px;
+  transform: rotate(-7deg);
+}
+.card:hover .card__bg2 {
+  top: -10px;
+  transform: rotate(-4deg);
+}
+.card__bg {
+  position: absolute;
+  max-width: 420px;
+  width: 100%;
+  height: 85px;
+  left: 18px;
+  top: -15px;
+}
+.card__bg1 {
+  position: absolute;
+  width: 84%;
+  height: 85.23px;
+  background: linear-gradient(180deg, #4f5565 0%, #000000 53.65%);
+  border-radius: 20px;
+  transform: rotate(-4.5deg);
+  top: -16%;
+  transition: all 0.4s linear;
+}
+.card__bg2 {
+  position: absolute;
+  width: 94%;
+  height: 67.97px;
+  background: linear-gradient(180deg, #31394d 0%, #091739 100%);
+  border-radius: 20px;
+  transform: rotate(-2.32deg);
+  top: -1%;
+  left: -0.5%;
+  transition: all 0.4s linear;
+}
 .card__body {
   max-width: 420px;
+  width: 100%;
   background-color: #252e42;
   box-shadow: 0px 14px 34px rgba(0, 0, 0, 0.25);
   height: 540px;
@@ -589,38 +630,41 @@ template {
   padding: 30px 16px 30px 30px;
   margin: 0 0 30px 0;
   position: relative;
+  cursor: pointer;
 }
 .card__body::after {
   content: "";
-  width: 359px;
-  height: 56px;
+  width: 79%;
+  height: 10%;
   position: absolute;
-  bottom: 3px;
+  bottom: 1%;
   background: linear-gradient(180deg, rgba(37, 46, 66, 0) 0%, #252e42 67.19%);
 }
 .card__body::before {
   content: "";
-  width: 437px;
-  height: 40px;
+  width: 105%;
+  height: 7.5%;
   position: absolute;
   background: linear-gradient(180deg, rgba(37, 46, 66, 0) 0%, #252e42 67.19%);
-  top: 273px;
-  left: 161px;
+  top: 50%;
+  left: 38%;
   transform: rotate(-90deg);
   z-index: 1;
 }
-.card__header {
-  display: flex;
-  justify-content: space-between;
+.card .card__header {
   margin: 0 0 20px 0;
 }
-.card__header .header__title {
+.card .header__content {
+  display: flex;
+  justify-content: space-between;
+}
+.card .header__title {
   font-weight: 700;
   font-size: 28px;
   line-height: 34px;
   color: #ffffff;
 }
-.card__header .header__btn {
+.card .header__btn {
   background-color: #ff8469;
   padding: 5px 10px;
   width: 54px;
@@ -666,6 +710,19 @@ template {
   left: -35px;
   transform: translate(0, -50%);
 }
+.card .list__item:hover {
+  color: #ff8469;
+}
+.card .list__item:hover::before {
+  background: rgba(255, 132, 105, 0.2);
+}
+.card .list__item.checked:hover {
+  color: #ffffff;
+}
+.card .list__item.checked::before {
+  background: url("../../assets/img/checkmark.svg") center no-repeat;
+  background-color: #ff8469;
+}
 .card .list__title {
   font-weight: 500;
   font-size: 16px;
@@ -683,9 +740,19 @@ template {
   overflow: hidden;
 }
 
+.checked {
+  text-decoration: line-through;
+  color: #4f5565;
+}
+
+.mouseenter {
+  color: #ffffff;
+}
+
 .footer {
   color: #414b62;
   text-align: center;
+  z-index: 1;
 }
 .footer__text {
   font-weight: 500;
@@ -710,8 +777,22 @@ body {
   align-items: center;
   justify-content: center;
 }
+.wrapper ._bg-animation {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(35.13% 50% at 50% 50%, #252e42 0%, #161c2e 100%);
+  transition: opacity 1s ease;
+}
+.wrapper.hovered ._bg-animation {
+  opacity: 1;
+}
 .wrapper ._container {
   max-width: 458px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
